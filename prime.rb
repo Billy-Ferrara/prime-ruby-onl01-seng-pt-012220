@@ -1,15 +1,14 @@
-prime?(num)
-  (2..(num -1)).each do |n|
-    return false if num % n == 0
+def prime?(value)
+  if value <= 1 || value == 0 || value == 1
+    return false
+  elsif
+    (2..value - 1).each do |i|
+      if value % i == 0
+        return false
+      end
+    end
   end
-  true
+  true 
 end
-
-
-prime?(7)
-
-prime?(4)
-
-prime?(-3)
 
 prime?(-1)
