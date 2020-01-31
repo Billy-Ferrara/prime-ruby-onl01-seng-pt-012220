@@ -1,0 +1,23 @@
+def prime(n)
+  return false if n < 2
+
+  (2..n/2).none?{|i| n % i == 0}
+end
+
+
+
+def prime?(num)
+  (2..(num -1)).each do |n|
+    return false if num % n == 0
+  end
+  true
+end
+
+
+prime?(7)
+
+prime?(4)
+
+prime?(-3)
+
+prime?(-1)
